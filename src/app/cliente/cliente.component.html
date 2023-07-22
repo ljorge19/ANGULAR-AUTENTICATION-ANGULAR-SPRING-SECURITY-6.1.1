@@ -1,0 +1,31 @@
+<body>
+    <br>
+    <br>
+    <table class="mat-table mat-elevation-z8">
+      <thead>
+        <tr class="mat-header-row">
+          <th class="custom-mat-cell">Nome</th>
+          <th class="custom-mat-cell">CPF</th>
+          <th class="custom-mat-cell">RG</th>
+          <th class="custom-mat-cell">Cargo</th>
+          <th class="custom-mat-cell">Conta Bancária</th>
+          <th class="custom-mat-cell">Endereço</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="mat-row" *ngFor="let cliente of dataSource.data">
+          <td class="custom-mat-cell">{{ cliente.nome }}</td>
+          <td class="custom-mat-cell">{{ cliente.cpf }}</td>
+          <td class="custom-mat-cell">{{ cliente.rg }}</td>
+          <td class="custom-mat-cell">{{ cliente.cargo }}</td>
+          <td class="custom-mat-cell">{{ cliente.contaBancaria }}</td>
+          <td class="custom-mat-cell">{{ cliente.endereco }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <div class="mat-paginator">
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    </div>
+  </body>
+  

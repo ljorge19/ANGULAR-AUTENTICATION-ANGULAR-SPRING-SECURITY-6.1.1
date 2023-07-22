@@ -1,0 +1,53 @@
+.app-cliente {
+  text-align: -webkit-center !important;
+}
+
+body {
+  background: darkslategrey;
+  margin: 8px;
+  text-align: -webkit-center !important;
+}
+
+
+.mat-table {
+  width: 900px;
+  height: 100px;
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+
+.mat-cell,
+.mat-header-cell,
+.mat-row {
+  border: 1px solid #000 !important;
+}
+  
+  .mat-row:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .custom-mat-cell {
+    text-align: left; /* Alinhamento do texto à esquerda */
+    padding: 8px; /* Espaçamento interno das células */
+  }
+  
+  .mat-header-row {
+    background-color: #f5f5f5; /* Cor de fundo do cabeçalho */
+    font-weight: bold; /* Estilo de fonte em negrito */
+  }
+  
+  .mat-row {
+    background-color: #ffffff; /* Cor de fundo das linhas de dados */
+  }
+  
+  
+  
+  
+  
+  
+   
+
+
+
+  
+  

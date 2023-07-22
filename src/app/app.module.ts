@@ -1,18 +1,37 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ClienteComponent } from './cliente/cliente.component';
+import { MatTableModule } from '@angular/material/table';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import { AuthService } from './auth.service';
+import { ToastrService } from 'ngx-toastr';
+import { ToastrModule } from 'ngx-toastr';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ClienteComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatTableModule,
+    FormsModule,
+    ToastrModule.forRoot(),
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
-  providers: [],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
+  providers: [AuthService, ToastrService, HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
