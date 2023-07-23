@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
-import { LoginService } from './loginService';
+import { HelloService } from './helloService';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  selector: 'app-hello',
+  templateUrl: './hello.component.html',
+  styleUrls: ['./hello.component.css']
 })
-export class LoginComponent {
+export class HelloComponent {
   username!: string;
   password!: string;
-  response: string = 'empty';
+  response!: string;
 
-  constructor(private loginService: LoginService) {}
+  constructor(private helloService: HelloService) {}
 
-  login() {
-    this.loginService.authenticate().subscribe(
+  hello() {
+    this.helloService.authenticate().subscribe(
       (data: string) => {
         // Handle the response data here
         this.response = data;
@@ -27,3 +27,4 @@ export class LoginComponent {
     );
   }
 }
+

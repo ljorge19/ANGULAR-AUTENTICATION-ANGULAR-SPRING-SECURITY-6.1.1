@@ -1,0 +1,12 @@
+<body id="body">
+  <div>
+    <br /><br />
+    <button class="btn btn-primary" (click)="hello()">
+      click here to console.log de database conecction
+    </button>
+    <br /><br />
+    <div *ngIf="response">
+      <p type="text" [(ngModel)]="response"> {{ response }}  "from database"</p>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,8 @@
+#body {
+    background-color: aliceblue; /* Replace this with your desired background color */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* 100% of viewport height */
+    width: 100vw; /* 100% of viewport width */
+  }
+  

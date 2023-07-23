@@ -12,12 +12,14 @@ import { ToastrService } from 'ngx-toastr';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HelloComponent } from './hello/hello.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClienteComponent,
-    LoginComponent
+    LoginComponent,
+    HelloComponent
   ],
   imports: [
     BrowserModule,
