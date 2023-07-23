@@ -8,6 +8,7 @@ import { ToastrService } from 'ngx-toastr';
     providedIn: 'root'
   })
   export class AuthGuard {
+    
   
     constructor(private authService: AuthService, private toastr: ToastrService, private router: Router) { }
     canActivate():
@@ -15,7 +16,8 @@ import { ToastrService } from 'ngx-toastr';
       | Promise<boolean | UrlTree>
       | boolean
       | UrlTree {
-      if (!this.authService.isLoggedIn()) {
+      const token = localStorage.getItem('token');
+      if (!token) {
         this.toastr.info('Please Log In!');
         this.router.navigate(['/login']);
         return false;

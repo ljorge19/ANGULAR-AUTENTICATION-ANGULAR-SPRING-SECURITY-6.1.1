@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoginService } from './loginService';
+import { LoginService } from './login.Service';
 
 @Component({
   selector: 'app-login',
@@ -13,17 +13,18 @@ export class LoginComponent {
 
   constructor(private loginService: LoginService) {}
 
-  login() {
-    this.loginService.authenticate().subscribe(
-      (data: string) => {
-        // Handle the response data here
-        this.response = data;
-        console.log('Resultado da consulta: ' + this.response);
-      },
-      (error) => {
-        // Handle errors here
-        console.error('Error during authentication: ', error);
-      },
-    );
+ 
+  login(): void {
+    this.loginService.authenticate(this.username, this.password)
+      .subscribe(
+        res => {
+          console.log('Login successful');
+          // handle successful login, e.g. navigate to another page
+        },
+        error => {
+          console.log('Login failed');
+          // handle error, e.g. show an error message
+        }
+      );
   }
 }
