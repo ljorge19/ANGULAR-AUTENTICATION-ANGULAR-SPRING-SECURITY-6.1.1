@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HelloService } from './helloService';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-hello',
@@ -18,11 +19,11 @@ export class HelloComponent {
       (data: string) => {
         // Handle the response data here
         this.response = data;
-        console.log('Resultado da consulta: ' + this.response);
+        Swal.fire('Resultado da consulta: ' + this.response);
       },
       (error) => {
         // Handle errors here
-        console.error('Error during authentication: ', error);
+        Swal.fire('Error during authentication: ', error);
       },
     );
   }

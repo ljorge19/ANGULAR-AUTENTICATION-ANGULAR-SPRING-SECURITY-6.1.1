@@ -7,7 +7,7 @@ import { HelloComponent } from './hello/hello.component';
 
 const routes: Routes = [
   { path: 'cliente', component: ClienteComponent, canActivate: [AuthGuard] },
-  { path: '', component: ClienteComponent, canActivate: [AuthGuard] },
+  { path: '', component: HelloComponent, canActivate: [AuthGuard] },
   { path: 'hello', component: HelloComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
 ];

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+import Swal from 'sweetalert2';
 import { LoginService } from './login.Service';
+
 
 @Component({
   selector: 'app-login',
@@ -19,10 +21,11 @@ export class LoginComponent {
       .subscribe(
         res => {
           console.log('Login successful');
-          // handle successful login, e.g. navigate to another page
+          Swal.fire('Login successful');
         },
         error => {
           console.log('Login failed');
+          Swal.fire('Login failed');
           // handle error, e.g. show an error message
         }
       );
