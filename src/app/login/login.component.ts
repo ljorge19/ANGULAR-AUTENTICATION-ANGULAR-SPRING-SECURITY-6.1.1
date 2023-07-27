@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import Swal from 'sweetalert2';
-import { LoginService } from './login.Service';
+import { LoginService } from './login.service';
 
 
 @Component({
